@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>0A.D. Unit query</title>
+  <meta name="description" content="Filter for popular 0AD opensource strategic game">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel='stylesheet' href='styles.css'>
+  
+  <script src="UnitTemplate.js"></script>
+  <script src="common.js"></script>
+  <script src="filters.js"></script>
+  <script src="controller.js"></script>
+  <script src="model.js"></script>
+  <script>window.addEventListener("load", function(event) { controller.initPlaceHolders(); }, false);</script>
+</head>
+
+<body>
+<!--
+  <a id='logoCircle' href='#'></a>
+-->
+  <a href='https://play0ad.com/'><img id='logo' src="logo.png" /></a>
+  <div id='header'>
+    <p style='margin-bottom:2em;'>A unit query page for <a href='https://play0ad.com/'>0 A.D.</a> opensource strategic game from <a href='http://wildfiregames.com/'>wildfire games</a>.</p>
+    <p>Move the mouse over a cell to show a tooltip with the property path. Use properties path to filter and sort order. Use <b>*</b> as path component jolly.</p>
+    <p>Prepend <b>-</b> to the order property path to invert the sort order.</p>
+    <p>See also python-generated <a href='unit_summary_table.html'>unit_summary_table.html</a> (from <a href='https://github.com/0ad/0ad/'>github repo</a>).</p>
+    <br><br>
+    <table id='filterTable'>
+        <tr>
+            <td>Filter by</td>
+            <td><input id='filterInput' type="text" value="Civilization.Name=Athenians" onkeypress="delayedInput(event, 180, controller.onFilterChanged)" /></td>
+        </tr>
+            <td>Order by</td>
+            <td><input id='orderInput' type="text" value="Identity.GenericName" onkeypress="delayedInput(event, 180, controller.onOrderChanged)" /></td>
+    </table>
+  </div>
+
+    <div id='mainTable' class='hidden' style="margin-top:3em">
+        <table class="center-table" style="width: 90em">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th style="width:8em">Civilization</th>
+                    <th></th>
+                    <th style="width:12em">Generic Name</th>
+                    <th style="width:10em">Specific Name</th>
+                    <th style="width:20.8em">Attack</th>
+                    <th style="width:8.2em">Armour</th>
+                    <th style="width:10em">Other</th>
+                    <th style="width:13em">Cost</th>
+                </tr>
+            </thead>
+            <tbody id='placeHolders'>
+                <tr><td colspan="9" style='text-align:center;'>
+                    <button style='float:left; margin-left: 2em;' id='buttonPrev' onclick='controller.prevPage()' disabled="true">Prev</button>
+                    <span style='color:#fafafa;'>Page <span id='currentPage'></span>/<span id='pagesNum'></span></span>
+                    <button style='float:right; margin-right: 2em;' id='buttonNext' onclick='controller.nextPage()' disabled="true">Next</button>
+                </td></tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+body {
+  font-family: Verdana, sans-serif;
+  background-color: #1b1b1b;
+  background-image: url("0adbg.jpeg");
+  color: #fefefe;
+}
+
+a {
+  text-decoration: none;
+  color:#1E90FF;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.hidden {
+  display: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.inverted {
+  filter: invert(100%);
+}
+
+img.emblem {
+  width: 42px;
+  height: 42px;
+}
+
+img.unitIcon {
+  width: 28px;
+  height: 28px;
+  border: 1px solid gray;
+}
+
+body {
+  padding: 1em;
+}
+ul {
+  padding-left: 1.5em;
+}
+table.unitPropTable {
+  font-family: monospace;
+  border: 1px solid gray;
+}
+table.unitPropTable th {
+  width: 3.6em;
+  padding-bottom: 0.3em;
+  text-align: center;
+  background-color: black;
+}
+table.unitPropTable td {
+  padding: 0.1em;
+  vertical-align: top;
+  text-align: center;
+  border: 1px solid gray;
+  color: #FFFFFF;
+  font-size: 1.3em;
+}
+
+#logo {
+  float:left;
+  height: 7em;
+}
+
+#header {
+  font-size:0.8em;
+  margin-top: 1em;
+  margin-left: 25em;
+}
+
+#mainTable table {
+  font-size: 0.8em;
+  border: 1px solid gray;
+  table-layout: fixed;
+}
+
+#mainTable table td {
+  overflow: hidden;
+}
+
+#mainTable table th {
+  padding-top: 1em;
+  overflow: hidden;
+}
+
+#mainTable table table th {
+  padding-top: 0.3em;
+  border: 1px solid gray;
+}
+
+#mainTable table tr:nth-child(odd) { background-color:#1e1e1e; }
+#mainTable table tr:nth-child(even) { background-color:#242424; }
+/*
+#mainTable table td {
+  border: 1px solid red;
+}
+*/
+
+#filterTable td {
+  padding: 0.6em;
+}
+
+#filterTable input {
+  width: 18em;
+  background-color : transparent;
+  color: white;
+  border: 0;
+  border-bottom: 1px solid gray;
+  font-size: 1.2em;
+}
+
+.center-table
+{
+  margin: 0 auto !important;
+  float: none !important;
+}
+.center-table th {
+    text-align: center;
+    padding-bottom: 1em;
+    border-bottom: 1px solid gray;
+}
+.center-table table th {
+    border: 0px;
+}
+.center-table td {
+    padding: 0.5em;
+}
