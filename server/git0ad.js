@@ -4,6 +4,7 @@ var async = require('async');
 var utils = require('./utils');
 var L = require('./locals');
 
+// not really a module
 module.exports = {
     updateFromGit: (function() {
       var BASE_URL = "https://github.com/0ad/0ad/trunk/binaries/data/mods/public"
@@ -50,3 +51,5 @@ module.exports = {
       };
     })(),
 }
+
+module.exports.updateFromGit();

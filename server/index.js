@@ -3,7 +3,6 @@
 var express = require('express');
 var fs = require('fs');
 var server = express();
-var git = require('./git0ad');
 var loader = require('./loader');
 var L = require('./locals');
 var utils = require('./utils');
@@ -59,5 +58,3 @@ server.use(express.static('app'));
 server.listen(L.SERVER_PORT, function () {
   log.debug('listening on port ' + L.SERVER_PORT);
 });
-
-//~ git.updateFromGit();
