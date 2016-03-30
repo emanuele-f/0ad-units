@@ -16,3 +16,9 @@ You need *subversion* in order to pull 0ad data.
 Server starts on port 3000 by default.
 
 On first client request, the units JSON file is generated, which may take some time.
+
+License
+-------
+0ad code is covered by GPL-2 license.
+0ad arts is covered by CC BY-SA 3.0.
+See 0ad [LICENCE.txt](https://github.com/0ad/0ad/blob/master/LICENSE.txt) for details.
